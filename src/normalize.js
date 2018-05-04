@@ -1,3 +1,6 @@
+import siret from './normalizers/siret'
+import siren from './normalizers/siren'
+
 //validator
 import blacklist from 'validator/lib/blacklist'
 import escape from 'validator/lib/escape'
@@ -13,9 +16,17 @@ import toInt from 'validator/lib/toInt'
 import trim from 'validator/lib/trim'
 import whitelist from 'validator/lib/whitelist'
 
-import siret from './normalizers/siret'
-import siren from './normalizers/siren'
+//xss-filters
+import {
+  uriInHTMLData, uriInHTMLComment, uriInSingleQuotedAttr, uriInDoubleQuotedAttr, uriInUnQuotedAttr,
+  uriPathInHTMLData, uriPathInHTMLComment, uriPathInSingleQuotedAttr, uriPathInDoubleQuotedAttr, uriPathInUnQuotedAttr,
+  uriQueryInHTMLData, uriQueryInHTMLComment, uriQueryInSingleQuotedAttr, uriQueryInDoubleQuotedAttr, uriQueryInUnQuotedAttr,
+  uriComponentInHTMLData, uriComponentInHTMLComment, uriComponentInSingleQuotedAttr, uriComponentInDoubleQuotedAttr, uriComponentInUnQuotedAttr,
+  uriFragmentInHTMLData, uriFragmentInHTMLComment, uriFragmentInSingleQuotedAttr, uriFragmentInDoubleQuotedAttr, uriFragmentInUnQuotedAttr,
+} from 'xss-filters'
 
+//dompurify
+import { sanitize as DOMPurify } from 'dompurify'
 
 export default {
   siret,
@@ -34,4 +45,12 @@ export default {
   toInt,
   whitelist,
   trim,
+  
+  uriInHTMLData, uriInHTMLComment, uriInSingleQuotedAttr, uriInDoubleQuotedAttr, uriInUnQuotedAttr,
+  uriPathInHTMLData, uriPathInHTMLComment, uriPathInSingleQuotedAttr, uriPathInDoubleQuotedAttr, uriPathInUnQuotedAttr,
+  uriQueryInHTMLData, uriQueryInHTMLComment, uriQueryInSingleQuotedAttr, uriQueryInDoubleQuotedAttr, uriQueryInUnQuotedAttr,
+  uriComponentInHTMLData, uriComponentInHTMLComment, uriComponentInSingleQuotedAttr, uriComponentInDoubleQuotedAttr, uriComponentInUnQuotedAttr,
+  uriFragmentInHTMLData, uriFragmentInHTMLComment, uriFragmentInSingleQuotedAttr, uriFragmentInDoubleQuotedAttr, uriFragmentInUnQuotedAttr,
+  
+  DOMPurify,
 }
