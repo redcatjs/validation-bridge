@@ -7,7 +7,7 @@
   "browser": "browser.js",
   "scripts": {
     "build": "npm run build:node & npm run build:browser",
-    "build:node": "babel src --out-dir dist --source-maps inline",
+    "build:node": "babel src --out-dir lib --source-maps inline",
     "build:browser": "webpack --mode production"
   },
   "repository": {
@@ -50,7 +50,7 @@
     "webpack-cli": "^2.0.15"
   },
   "files": [
-    "dist",
+    "lib",
     "browser.js",
     "browser.js.map",
     "node.js"
