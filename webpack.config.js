@@ -19,12 +19,16 @@ module.exports = {
   },
   externals: {
     'validator': {
-      commonjs: 'validator',
+			commonjs: 'validator',
 			commonjs2: 'validator',
 		},
-		'siret': {
+    'siret': {
 			commonjs: 'siret',
 			commonjs2: 'siret',
+		},
+    'typeable': {
+			commonjs: 'typeable',
+			commonjs2: 'typeable',
 		},
     'xss-filters': {
 			commonjs: 'xss-filters',

@@ -29,7 +29,8 @@
     "dompurify": "^1.0.4",
     "sanitize-html": "^1.18.2",
     "siret": "^1.0.1",
-    "validator": "^9.4.1",
+    "typeable": "^2.4.1",
+    "validator": "^10.0.0",
     "xss-filters": "^1.2.7"
   },
   "devDependencies": {
