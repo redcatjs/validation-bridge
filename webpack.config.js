@@ -17,5 +17,31 @@ module.exports = {
       }
     ]
   },
+  externals: {
+    'validator': {
+      commonjs: 'validator',
+			commonjs2: 'validator',
+		},
+		'siret': {
+			commonjs: 'siret',
+			commonjs2: 'siret',
+		},
+    'xss-filters': {
+			commonjs: 'xss-filters',
+			commonjs2: 'xss-filters',
+		},
+    'dompurify': {
+			commonjs: 'dompurify',
+			commonjs2: 'dompurify',
+		},
+    'sanitize-html': {
+			commonjs: 'sanitize-html',
+			commonjs2: 'sanitize-html',
+		},
+    'sanitize-html': {
+			commonjs: 'sanitize-html',
+			commonjs2: 'sanitize-html',
+		},
+  },
   devtool: 'source-map'
 }
