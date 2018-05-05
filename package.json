@@ -8,7 +8,9 @@
   "scripts": {
     "build": "npm run build:node & npm run build:browser",
     "build:node": "babel src --out-dir lib --source-maps inline",
-    "build:browser": "webpack --mode production"
+    "build:browser": "webpack --mode production",
+    "prepare": "npm run build",
+    "codestyle": "standard"
   },
   "repository": {
     "type": "git",
@@ -55,5 +57,12 @@
     "browser.js",
     "browser.js.map",
     "node.js"
-  ]
+  ],
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "/lib/",
+      "/browser.js"
+    ]
+  }
 }

@@ -19,33 +19,29 @@ module.exports = {
   },
   externals: {
     'validator': {
-			commonjs: 'validator',
-			commonjs2: 'validator',
-		},
+      commonjs: 'validator',
+      commonjs2: 'validator'
+    },
     'siret': {
-			commonjs: 'siret',
-			commonjs2: 'siret',
-		},
+      commonjs: 'siret',
+      commonjs2: 'siret'
+    },
     'typeable': {
-			commonjs: 'typeable',
-			commonjs2: 'typeable',
-		},
+      commonjs: 'typeable',
+      commonjs2: 'typeable'
+    },
     'xss-filters': {
-			commonjs: 'xss-filters',
-			commonjs2: 'xss-filters',
-		},
+      commonjs: 'xss-filters',
+      commonjs2: 'xss-filters'
+    },
     'dompurify': {
-			commonjs: 'dompurify',
-			commonjs2: 'dompurify',
-		},
+      commonjs: 'dompurify',
+      commonjs2: 'dompurify'
+    },
     'sanitize-html': {
-			commonjs: 'sanitize-html',
-			commonjs2: 'sanitize-html',
-		},
-    'sanitize-html': {
-			commonjs: 'sanitize-html',
-			commonjs2: 'sanitize-html',
-		},
+      commonjs: 'sanitize-html',
+      commonjs2: 'sanitize-html'
+    }
   },
   devtool: 'source-map'
 }

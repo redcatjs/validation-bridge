@@ -43,9 +43,9 @@ import stringHalfWith from './validators/string-half-width'
 import stringHash from './validators/string-hash'
 import stringIn from './validators/string-in'
 import stringInt from './validators/string-int'
-import stringIp  from './validators/string-ip'
+import stringIp from './validators/string-ip'
 import stringISBN from './validators/string-isbn'
-import stringISIN  from './validators/string-isin'
+import stringISIN from './validators/string-isin'
 import stringISO8601 from './validators/string-iso8601'
 import stringISO31661Alpha2 from './validators/string-iso31661alpha2'
 import stringISO31661Alpha3 from './validators/string-iso31661alpha3'
@@ -68,12 +68,12 @@ import stringURL from './validators/string-url'
 import stringVariableWidth from './validators/string-variable-width'
 import stringWhitelisted from './validators/string-whitelisted'
 
-//others
+// others
 import stringSIRET from './validators/string-siret'
 import stringSIREN from './validators/string-siren'
 
 export default {
-  
+
   absence,
   arrayExclusion,
   arrayInclusion,
@@ -96,8 +96,7 @@ export default {
   stringUppercase,
   stringUUID,
   stringETHAddress,
-  
-  
+
   stringAlpha,
   stringAlphanumeric,
   stringAscii,
@@ -143,7 +142,6 @@ export default {
   stringVariableWidth,
   stringWhitelisted,
 
-  
   stringSIRET,
-  stringSIREN,
+  stringSIREN
 }

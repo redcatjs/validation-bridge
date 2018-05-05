@@ -1,8 +1,8 @@
-export default function(rules){
+export default function (rules) {
   const ruleFactories = {}
-  Object.entries(rules).forEach(([name, func])=>{
-    ruleFactories[name] = function(options){
-      return function(value, allValues){
+  Object.entries(rules).forEach(([name, func]) => {
+    ruleFactories[name] = function (options) {
+      return function (value, allValues) {
         return func(value, options, allValues)
       }
     }

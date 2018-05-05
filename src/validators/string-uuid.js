@@ -24,10 +24,10 @@ export default function stringUUID (value, recipe = {}) {
   }
 
   return (
-    V1_REGEX.test(value)
-    || V2_REGEX.test(value)
-    || V3_REGEX.test(value)
-    || V4_REGEX.test(value)
-    || V5_REGEX.test(value)
+    V1_REGEX.test(value) ||
+    V2_REGEX.test(value) ||
+    V3_REGEX.test(value) ||
+    V4_REGEX.test(value) ||
+    V5_REGEX.test(value)
   )
 }

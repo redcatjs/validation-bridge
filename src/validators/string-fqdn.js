@@ -1,6 +1,6 @@
 import { isString } from 'typeable'
 
-export default function stringFQDN (value, options = {}){
+export default function stringFQDN (value, options = {}) {
   let { requireTld = true, allowUnderscores = false, allowTrailingDot = false } = options
 
   if (!isString(value)) return false
@@ -25,19 +25,16 @@ export default function stringFQDN (value, options = {}){
     if (allowUnderscores) {
       if (part.indexOf('__') >= 0) {
         return false
-      }
-      else {
+      } else {
         part = part.replace(/_/g, '')
       }
     }
 
     if (!/^[a-z\u00a1-\uffff0-9-]+$/i.test(part)) {
       return false
-    }
-    else if (/[\uff01-\uff5e]/.test(part)) {
+    } else if (/[\uff01-\uff5e]/.test(part)) {
       return false // disallow full-width chars
-    }
-    else if (part[0] === '-' || part[part.length - 1] === '-') {
+    } else if (part[0] === '-' || part[part.length - 1] === '-') {
       return false
     }
   }
