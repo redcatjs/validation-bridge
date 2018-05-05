@@ -42,6 +42,10 @@ module.exports = {
       commonjs: 'sanitize-html',
       commonjs2: 'sanitize-html'
     },
+    'mysql-validator': {
+      commonjs: 'mysql-validator',
+      commonjs2: 'mysql-validator'
+    },
     'async-validator': {
       commonjs: 'async-validator',
       commonjs2: 'async-validator'
