@@ -48,7 +48,7 @@ import stringISBN from './validators/string-isbn'
 import stringISIN  from './validators/string-isin'
 import stringISO8601 from './validators/string-iso8601'
 import stringISO31661Alpha2 from './validators/string-iso31661alpha2'
-// import stringISO31661Alpha3 from './validators/string-iso31661alpha3'
+import stringISO31661Alpha3 from './validators/string-iso31661alpha3'
 import stringISRC from './validators/string-isrc'
 import stringISSN from './validators/string-issn'
 import stringLatLong from './validators/string-lat-long'
@@ -123,7 +123,7 @@ export default {
   stringISIN,
   stringISO8601,
   stringISO31661Alpha2,
-  // stringISO31661Alpha3,
+  stringISO31661Alpha3,
   stringISRC,
   stringISSN,
   stringLatLong,
