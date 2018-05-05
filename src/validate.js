@@ -72,6 +72,7 @@ import stringWhitelisted from './validators/string-whitelisted'
 import stringSIRET from './validators/string-siret'
 import stringSIREN from './validators/string-siren'
 import ENUM from './validators/enum'
+import mysql from './validators/mysql'
 
 export default {
 
@@ -145,5 +146,6 @@ export default {
 
   stringSIRET,
   stringSIREN,
-  ENUM
+  ENUM,
+  mysql
 }

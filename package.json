@@ -31,6 +31,7 @@
     "async-validator": "^1.8.2",
     "bluebird": "^3.5.1",
     "dompurify": "^1.0.4",
+    "mysql-validator": "^0.1.6",
     "sanitize-html": "^1.18.2",
     "siret": "^1.0.1",
     "typeable": "^2.4.1",
