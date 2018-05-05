@@ -41,6 +41,14 @@ module.exports = {
     'sanitize-html': {
       commonjs: 'sanitize-html',
       commonjs2: 'sanitize-html'
+    },
+    'async-validator': {
+      commonjs: 'async-validator',
+      commonjs2: 'async-validator'
+    },
+    'bluebird': {
+      commonjs: 'bluebird',
+      commonjs2: 'bluebird'
     }
   },
   devtool: 'source-map'

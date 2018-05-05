@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/redcatjs/validation-bridge#readme",
   "dependencies": {
+    "async-validator": "^1.8.2",
+    "bluebird": "^3.5.1",
     "dompurify": "^1.0.4",
     "sanitize-html": "^1.18.2",
     "siret": "^1.0.1",
