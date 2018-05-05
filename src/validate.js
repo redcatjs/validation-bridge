@@ -6,6 +6,7 @@ import arrayLength from './validators/array-length'
 import BSONObjectID from './validators/bson-object-id'
 import numberSize from './validators/number-size'
 import presence from './validators/presence'
+import required from './validators/required'
 import stringBase64 from './validators/string-base64'
 import stringDate from './validators/string-date'
 import stringEmail from './validators/string-email'
@@ -83,6 +84,7 @@ export default {
   BSONObjectID,
   numberSize,
   presence,
+  required,
   stringBase64,
   stringDate,
   stringEmail,
