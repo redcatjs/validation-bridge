@@ -9,14 +9,13 @@ export default function schemaValidatorFactory (rules, errorHandler) {
   function SchemaValidate (descriptor) {
     return async function (data) {
       const validator = new Schema(descriptor)
-      try{
-        const result = await validator.validateAsync(data)
-      }
-      catch(e){
-        if(typeof errorHandler === 'function'){
+      let result
+      try {
+        result = await validator.validateAsync(data)
+      } catch (e) {
+        if (typeof errorHandler === 'function') {
           errorHandler(e)
-        }
-        else{
+        } else {
           throw e
         }
       }
