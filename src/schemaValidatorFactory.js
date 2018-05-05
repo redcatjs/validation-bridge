@@ -3,7 +3,7 @@
 import Bluebird from 'bluebird'
 import Schema from 'async-validator'
 
-Schema.validateAsync = Bluebird.promisify(Schema.validate)
+Schema.prototype.validateAsync = Bluebird.promisify(Schema.prototype.validate)
 
 export default function schemaValidatorFactory (rules) {
   function SchemaValidate (descriptor) {
