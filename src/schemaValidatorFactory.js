@@ -5,11 +5,22 @@ import Schema from 'async-validator'
 
 Schema.prototype.validateAsync = Bluebird.promisify(Schema.prototype.validate)
 
-export default function schemaValidatorFactory (rules) {
+export default function schemaValidatorFactory (rules, errorHandler) {
   function SchemaValidate (descriptor) {
-    return function (data) {
+    return async function (data) {
       const validator = new Schema(descriptor)
-      return validator.validateAsync(data)
+      try{
+        const result = await validator.validateAsync(data)
+      }
+      catch(e){
+        if(typeof errorHandler === 'function'){
+          errorHandler(e)
+        }
+        else{
+          throw e
+        }
+      }
+      return result
     }
   }
   Object.entries(rules).forEach(([ruleName, func]) => {
