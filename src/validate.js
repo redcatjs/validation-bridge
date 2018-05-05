@@ -71,6 +71,7 @@ import stringWhitelisted from './validators/string-whitelisted'
 // others
 import stringSIRET from './validators/string-siret'
 import stringSIREN from './validators/string-siren'
+import enum from './validators/enum'
 
 export default {
 
@@ -143,5 +144,6 @@ export default {
   stringWhitelisted,
 
   stringSIRET,
-  stringSIREN
+  stringSIREN,
+  enum
 }
