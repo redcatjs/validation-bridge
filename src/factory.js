@@ -1,7 +1,7 @@
-import { isPresent } from 'typeable'
+import { isAbsent } from 'typeable'
 
 function defaultWrapper (callback, value, allValues) {
-  if (!isPresent(value)) {
+  if (isAbsent(value) && !callback.isRequired) {
     return true
   }
   return callback(value, allValues)
