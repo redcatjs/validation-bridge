@@ -1,10 +1,10 @@
 import { isAbsent } from 'typeable'
 
-function defaultWrapper (callback, value, allValues) {
+function defaultWrapper (callback, value, options, allValues) {
   if (isAbsent(value) && !callback.isRequired) {
     return true
   }
-  return callback(value, allValues)
+  return callback(value, options, allValues)
 }
 
 export default function (rules, wrapper = defaultWrapper) {
@@ -12,7 +12,7 @@ export default function (rules, wrapper = defaultWrapper) {
   Object.entries(rules).forEach(([name, func]) => {
     ruleFactories[name] = function (options) {
       return function (value, allValues) {
-        return wrapper(func, value, allValues)
+        return wrapper(func, value, options, allValues)
       }
     }
   })
