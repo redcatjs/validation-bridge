@@ -2,6 +2,7 @@
 import not from './validators/not'
 import isObject from './validators/is-object'
 import isArray from './validators/is-array'
+import isInteger from './validators/is-integer'
 import isString from './validators/is-string'
 import arrayEvery from './validators/array-every'
 import arraySome from './validators/array-some'
@@ -87,6 +88,7 @@ export default {
   not,
   isObject,
   isArray,
+  isInteger,
   isString,
   arrayEvery,
   arraySome,
