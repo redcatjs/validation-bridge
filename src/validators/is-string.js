@@ -1,5 +1,5 @@
-import { isString } from 'typeable'
+import { isString as typeableIsString } from 'typeable'
 
 export default function isString (value) {
-  return isString(value)
+  return typeableIsString(value)
 }

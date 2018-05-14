@@ -1,5 +1,5 @@
-import { isArray } from 'typeable'
+import { isArray as typeableIsArray } from 'typeable'
 
 export default function isArray (value) {
-  return isArray(value)
+  return typeableIsArray(value)
 }
