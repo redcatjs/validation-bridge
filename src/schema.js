@@ -13,20 +13,21 @@ export default class Schema {
     this.errors.push(error)
   }
   async validate (data) {
-    await Object.entries(data).forEach(async ([key, value]) => {
+    const entries = Object.entries(data)
+    for (let [key, value] of entries) {
       const funcList = this.rules[key]
       if (funcList === undefined) {
         if (this.strict) {
           this.error(key, undefined, value)
         }
       } else {
-        await funcList.forEach(async (func) => {
+        for (let func of funcList) {
           if (!await func(value, data)) {
             this.error(key, func, value)
           }
-        })
+        }
       }
-    })
+    }
     return this.errors.length === 0
   }
   validateSync (data) {
