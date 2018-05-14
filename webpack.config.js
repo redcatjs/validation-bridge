@@ -45,14 +45,6 @@ module.exports = {
     'mysql-validator': {
       commonjs: 'mysql-validator',
       commonjs2: 'mysql-validator'
-    },
-    'async-validator': {
-      commonjs: 'async-validator',
-      commonjs2: 'async-validator'
-    },
-    'bluebird': {
-      commonjs: 'bluebird',
-      commonjs2: 'bluebird'
     }
   },
   devtool: 'source-map'
