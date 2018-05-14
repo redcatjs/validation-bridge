@@ -37,17 +37,13 @@ export default function schemaValidatorFactory (rules, errorHandler, wrapper = d
   function SchemaValidate (rules) {
     return async function (data) {
       const schema = new Schema(rules)
-      let result
-      try {
-        result = await schema.validate(data)
-      } catch (e) {
+      if (!await schema.validate(data)) {
         if (typeof errorHandler === 'function') {
-          errorHandler(e)
-        } else {
-          throw e
+          errorHandler(schema.errors)
         }
+        return false
       }
-      return result
+      return true
     }
   }
 
