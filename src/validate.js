@@ -4,6 +4,7 @@ import isObject from './validators/is-object'
 import isArray from './validators/is-array'
 import isInteger from './validators/is-integer'
 import isString from './validators/is-string'
+import isBool from './validators/is-bool'
 import arrayEvery from './validators/array-every'
 import arraySome from './validators/array-some'
 import arrayIn from './validators/array-in'
@@ -90,6 +91,7 @@ export default {
   isArray,
   isInteger,
   isString,
+  isBool,
   arrayEvery,
   arraySome,
   arrayIn,
