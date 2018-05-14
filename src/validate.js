@@ -1,4 +1,5 @@
 // validatable
+import not from './validators/not'
 import absence from './validators/absence'
 import arrayLength from './validators/array-length'
 import BSONObjectID from './validators/bson-object-id'
@@ -75,6 +76,7 @@ import mysql from './validators/mysql'
 
 export default {
 
+  not,
   absence,
   arrayLength,
   BSONObjectID,
