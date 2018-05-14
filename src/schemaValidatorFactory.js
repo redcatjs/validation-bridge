@@ -3,9 +3,11 @@
 import Bluebird from 'bluebird'
 import Schema from 'async-validator'
 
+import defaultWrapper from 'defaultWrapper'
+
 Schema.prototype.validateAsync = Bluebird.promisify(Schema.prototype.validate)
 
-export default function schemaValidatorFactory (rules, errorHandler) {
+export default function schemaValidatorFactory (rules, errorHandler, wrapper = defaultWrapper) {
   function SchemaValidate (descriptor) {
     return async function (data) {
       const validator = new Schema(descriptor)
@@ -26,7 +28,7 @@ export default function schemaValidatorFactory (rules, errorHandler) {
     SchemaValidate[ruleName] = function (options) {
       return function (rule, value, callback, allValues) {
         const errors = []
-        if (!func(value, options, allValues)) {
+        if (!wrapper(func, value, options, allValues)) {
           const fieldName = rule.field
           const message = 'error on field "' + fieldName + '" ' + (func.message || ('expected ' + ruleName))
           const error = new Error(message)

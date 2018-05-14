@@ -1,11 +1,5 @@
 import { isAbsent } from 'typeable'
-
-function defaultWrapper (callback, value, options, allValues) {
-  if (isAbsent(value) && !callback.isRequired) {
-    return true
-  }
-  return callback(value, options, allValues)
-}
+import defaultWrapper from 'defaultWrapper'
 
 export default function (rules, wrapper = defaultWrapper) {
   const ruleFactories = {}
