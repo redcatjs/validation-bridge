@@ -1,5 +1,7 @@
 // validatable
 import not from './validators/not'
+import isArray from './validators/is-array'
+import isString from './validators/is-string'
 import arrayIn from './validators/array-in'
 import arrayEveryIn from './validators/array-every-in'
 import arraySomeIn from './validators/array-some-in'
@@ -80,6 +82,8 @@ import mysql from './validators/mysql'
 export default {
 
   not,
+  isArray,
+  isString,
   arrayIn,
   arrayEveryIn,
   arraySomeIn,
