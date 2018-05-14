@@ -16,7 +16,7 @@ export default function schemaValidatorFactory (rules, errorHandler, wrapper = d
       return this.errors.length === 0
     }
     error (fieldName, func, value) {
-      const funcMessage = (func.message || 'unexpected value')
+      const funcMessage = ((func && func.message) || 'unexpected value')
       const message = `error on field "${fieldName}" ${funcMessage}`
       const error = new Error(message)
       error.fieldName = fieldName
@@ -27,7 +27,7 @@ export default function schemaValidatorFactory (rules, errorHandler, wrapper = d
       Object.entries(data).forEach(([key, value]) => {
         const func = this.rules[key]
         if (func === undefined || !func(value, data)) {
-          this.error(key, value)
+          this.error(key, func, value)
         }
       })
       return this.errors.length === 0
