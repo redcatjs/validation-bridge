@@ -1,6 +1,6 @@
 // validatable
 import not from './validators/not'
-import arrayIn from './validators/arrayIn'
+import arrayIn from './validators/array-in'
 import absence from './validators/absence'
 import arrayLength from './validators/array-length'
 import BSONObjectID from './validators/bson-object-id'
