@@ -1,6 +1,6 @@
 import { isArray } from 'typeable'
 
-export default async function arrayEveryAsync (values, callback) {
+async function arrayEveryAsync (values, callback) {
   if (!isArray(values)) return false
   for (let value of values) {
     if (!await callback(value)) {
@@ -9,3 +9,5 @@ export default async function arrayEveryAsync (values, callback) {
   }
   return true
 }
+
+export default arrayEveryAsync
