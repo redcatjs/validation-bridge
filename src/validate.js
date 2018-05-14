@@ -3,6 +3,8 @@ import not from './validators/not'
 import isObject from './validators/is-object'
 import isArray from './validators/is-array'
 import isString from './validators/is-string'
+import arrayEvery from './validators/array-every'
+import arraySome from './validators/array-some'
 import arrayIn from './validators/array-in'
 import arrayEveryIn from './validators/array-every-in'
 import arraySomeIn from './validators/array-some-in'
@@ -86,6 +88,8 @@ export default {
   isObject,
   isArray,
   isString,
+  arrayEvery,
+  arraySome,
   arrayIn,
   arrayEveryIn,
   arraySomeIn,
