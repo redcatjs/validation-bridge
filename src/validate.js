@@ -1,6 +1,8 @@
 // validatable
 import not from './validators/not'
 import arrayIn from './validators/array-in'
+import arrayEveryIn from './validators/array-every-in'
+import arraySomeIn from './validators/array-some-in'
 import absence from './validators/absence'
 import arrayLength from './validators/array-length'
 import BSONObjectID from './validators/bson-object-id'
@@ -79,6 +81,8 @@ export default {
 
   not,
   arrayIn,
+  arrayEveryIn,
+  arraySomeIn,
   absence,
   arrayLength,
   BSONObjectID,
