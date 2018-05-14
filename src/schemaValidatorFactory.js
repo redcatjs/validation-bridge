@@ -2,7 +2,6 @@ import defaultWrapper from './defaultWrapper'
 import Schema from './schema'
 
 export default function schemaValidatorFactory (rules, errorHandler, wrapper = defaultWrapper) {
-
   function SchemaValidate (rules) {
     return async function (data) {
       const schema = new Schema(rules)
