@@ -3,7 +3,7 @@
 import Bluebird from 'bluebird'
 import Schema from 'async-validator'
 
-import defaultWrapper from 'defaultWrapper'
+import defaultWrapper from './defaultWrapper'
 
 Schema.prototype.validateAsync = Bluebird.promisify(Schema.prototype.validate)
 

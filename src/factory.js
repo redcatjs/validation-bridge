@@ -1,5 +1,5 @@
 import { isAbsent } from 'typeable'
-import defaultWrapper from 'defaultWrapper'
+import defaultWrapper from './defaultWrapper'
 
 export default function (rules, wrapper = defaultWrapper) {
   const ruleFactories = {}
