@@ -2,15 +2,18 @@ import defaultWrapper from './defaultWrapper'
 
 export default function schemaValidatorFactory (rules, errorHandler, wrapper = defaultWrapper) {
   class Schema {
-    constructor (rules) {
+    constructor (rules, strict = false) {
       this.rules = rules
       this.errors = []
+      this.strict = strict
     }
     async validate (data) {
       await Object.entries(data).forEach(async ([key, value]) => {
         const funcList = this.rules[key]
         if (funcList === undefined) {
-          this.error(key, undefined, value)
+          if (this.strict) {
+            this.error(key, undefined, value)
+          }
         } else {
           await funcList.forEach(async (func) => {
             if (!await func(value, data)) {
