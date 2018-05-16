@@ -1,6 +1,6 @@
 export default function isScalar (value, {
   withSymbol = true
-}) {
+} = {}) {
   const type = typeof (value)
   if (type === 'string') return true
   if (type === 'number') return true
