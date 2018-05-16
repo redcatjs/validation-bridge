@@ -1,5 +1,6 @@
 // validatable
 import not from './validators/not'
+import isScalar from './validators/is-scalar'
 import isObject from './validators/is-object'
 import isArray from './validators/is-array'
 import isInteger from './validators/is-integer'
@@ -89,6 +90,7 @@ import mysql from './validators/mysql'
 export default {
 
   not,
+  isScalar,
   isObject,
   isArray,
   isInteger,
