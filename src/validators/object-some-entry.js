@@ -1,4 +1,4 @@
-import isObject from 'is-object'
+import isObject from './is-object'
 export default function objectSomeEntry (object, callback) {
   if (!isObject(object)) return false
   return Object.entries(object).some((entry) => {

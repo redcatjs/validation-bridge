@@ -1,4 +1,4 @@
-import isObject from 'is-object'
+import isObject from './is-object'
 
 async function objectEveryValueAsync (object, callback) {
   if (!isObject(object)) return false

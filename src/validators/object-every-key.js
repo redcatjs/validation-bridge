@@ -1,4 +1,4 @@
-import isObject from 'is-object'
+import isObject from './is-object'
 export default function objectEveryKey (object, callback) {
   if (!isObject(object)) return false
   return Object.keys(object).every((key) => {
