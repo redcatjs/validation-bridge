@@ -13,6 +13,18 @@ import arraySomeAsync from './validators/array-some-async'
 import arrayIn from './validators/array-in'
 import arrayEveryIn from './validators/array-every-in'
 import arraySomeIn from './validators/array-some-in'
+import objectEveryValue from './validators/object-every-value'
+import objectEveryValueAsync from './validators/object-every-value-async'
+import objectEveryKey from './validators/object-every-key'
+import objectEveryKeyAsync from './validators/object-every-key-async'
+import objectEveryEntry from './validators/object-every-entry'
+import objectEveryEntryAsync from './validators/object-every-entry-async'
+import objectSomeValue from './validators/object-some-value'
+import objectSomeValueAsync from './validators/object-some-value-async'
+import objectSomeKey from './validators/object-some-key'
+import objectSomeKeyAsync from './validators/object-some-key-async'
+import objectSomeEntry from './validators/object-some-entry'
+import objectSomeEntryAsync from './validators/object-some-entry-async'
 import absence from './validators/absence'
 import arrayLength from './validators/array-length'
 import BSONObjectID from './validators/bson-object-id'
@@ -103,6 +115,18 @@ export default {
   arrayIn,
   arrayEveryIn,
   arraySomeIn,
+  objectEveryValue,
+  objectEveryValueAsync,
+  objectEveryKey,
+  objectEveryKeyAsync,
+  objectEveryEntry,
+  objectEveryEntryAsync,
+  objectSomeValue,
+  objectSomeValueAsync,
+  objectSomeKey,
+  objectSomeKeyAsync,
+  objectSomeEntry,
+  objectSomeEntryAsync,
   absence,
   arrayLength,
   BSONObjectID,
