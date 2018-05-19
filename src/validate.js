@@ -1,11 +1,13 @@
 // validatable
 import not from './validators/not'
+
 import isScalar from './validators/is-scalar'
 import isObject from './validators/is-object'
 import isArray from './validators/is-array'
 import isInteger from './validators/is-integer'
 import isString from './validators/is-string'
 import isBool from './validators/is-bool'
+
 import arrayEvery from './validators/array-every'
 import arrayEveryAsync from './validators/array-every-async'
 import arraySome from './validators/array-some'
@@ -13,19 +15,32 @@ import arraySomeAsync from './validators/array-some-async'
 import arrayIn from './validators/array-in'
 import arrayEveryIn from './validators/array-every-in'
 import arraySomeIn from './validators/array-some-in'
+
 import objectEveryValue from './validators/object-every-value'
 import objectEveryValueAsync from './validators/object-every-value-async'
 import objectEveryKey from './validators/object-every-key'
 import objectEveryKeyAsync from './validators/object-every-key-async'
 import objectEveryEntry from './validators/object-every-entry'
 import objectEveryEntryAsync from './validators/object-every-entry-async'
+
 import objectSomeValue from './validators/object-some-value'
 import objectSomeValueAsync from './validators/object-some-value-async'
 import objectSomeKey from './validators/object-some-key'
 import objectSomeKeyAsync from './validators/object-some-key-async'
 import objectSomeEntry from './validators/object-some-entry'
 import objectSomeEntryAsync from './validators/object-some-entry-async'
+
+import objectEveryKeyAsyncIn from './validators/object-every-key-async-in'
+import objectEveryKeyIn from './validators/object-every-key-in'
+import objectEveryValueAsyncIn from './validators/object-every-value-async-in'
+import objectEveryValueIn from './validators/object-every-value-in'
+import objectSomeKeyAsyncIn from './validators/object-some-key-async-in'
+import objectSomeKeyIn from './validators/object-some-key-in'
+import objectSomeValueAsyncIn from './validators/object-some-value-async-in'
+import objectSomeValueIn from './validators/object-some-value-in'
+
 import absence from './validators/absence'
+
 import arrayLength from './validators/array-length'
 import BSONObjectID from './validators/bson-object-id'
 import numberSize from './validators/number-size'
@@ -102,12 +117,14 @@ import mysql from './validators/mysql'
 export default {
 
   not,
+
   isScalar,
   isObject,
   isArray,
   isInteger,
   isString,
   isBool,
+
   arrayEvery,
   arrayEveryAsync,
   arraySome,
@@ -115,6 +132,7 @@ export default {
   arrayIn,
   arrayEveryIn,
   arraySomeIn,
+
   objectEveryValue,
   objectEveryValueAsync,
   objectEveryKey,
@@ -127,6 +145,16 @@ export default {
   objectSomeKeyAsync,
   objectSomeEntry,
   objectSomeEntryAsync,
+
+  objectEveryKeyAsyncIn,
+  objectEveryKeyIn,
+  objectEveryValueAsyncIn,
+  objectEveryValueIn,
+  objectSomeKeyAsyncIn,
+  objectSomeKeyIn,
+  objectSomeValueAsyncIn,
+  objectSomeValueIn,
+
   absence,
   arrayLength,
   BSONObjectID,
