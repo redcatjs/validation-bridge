@@ -1,3 +1,11 @@
+function ensureKeysExists (keys, data) {
+  keys.forEach(key => {
+    if (!Object.prototype.hasOwnProperty.call(data, key)) {
+      data[key] = undefined
+    }
+  })
+}
+
 export default class Schema {
   constructor (rules, strict = false) {
     this.rules = rules
@@ -13,6 +21,7 @@ export default class Schema {
     this.errors.push(error)
   }
   async validate (data) {
+    ensureKeysExists(Object.keys(this.rules), data)
     const entries = Object.entries(data)
     for (let [key, value] of entries) {
       const funcList = this.rules[key]
@@ -31,6 +40,7 @@ export default class Schema {
     return this.errors.length === 0
   }
   validateSync (data) {
+    ensureKeysExists(Object.keys(this.rules), data)
     Object.entries(data).forEach(([key, value]) => {
       const funcList = this.rules[key]
       if (funcList === undefined) {
