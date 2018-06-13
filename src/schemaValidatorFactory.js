@@ -2,8 +2,16 @@ import defaultWrapper from './defaultWrapper'
 import Schema from './schema'
 
 export default function schemaValidatorFactory (rules, errorHandler, wrapper = defaultWrapper, defaultStrict) {
-  function SchemaValidate (rules) {
-    const schema = new Schema(rules, defaultStrict)
+  function SchemaValidate (rules, strict) {
+    if (typeof rules === 'boolean') {
+      const _strict = rules
+      rules = strict
+      strict = _strict
+    }
+    if (strict === undefined) {
+      strict = defaultStrict
+    }
+    const schema = new Schema(rules, strict)
     return async function (data, strict) {
       if (typeof data === 'boolean') {
         const _strict = data
