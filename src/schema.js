@@ -20,13 +20,14 @@ export default class Schema {
     error.value = value
     this.errors.push(error)
   }
-  async validate (data) {
+  async validate (data, strict) {
+    strict = strict===undefined ? this.strict : strict
     ensureKeysExists(Object.keys(this.rules), data)
     const entries = Object.entries(data)
     for (let [key, value] of entries) {
       const funcList = this.rules[key]
       if (funcList === undefined) {
-        if (this.strict) {
+        if (strict) {
           this.error(key, undefined, value)
         }
       } else {
@@ -39,12 +40,13 @@ export default class Schema {
     }
     return this.errors.length === 0
   }
-  validateSync (data) {
+  validateSync (data, strict) {
+    strict = strict===undefined ? this.strict : strict
     ensureKeysExists(Object.keys(this.rules), data)
     Object.entries(data).forEach(([key, value]) => {
       const funcList = this.rules[key]
       if (funcList === undefined) {
-        if (this.strict) {
+        if (strict) {
           this.error(key, undefined, value)
         }
       } else {

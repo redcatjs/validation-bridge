@@ -1,11 +1,17 @@
 import defaultWrapper from './defaultWrapper'
 import Schema from './schema'
 
-export default function schemaValidatorFactory (rules, errorHandler, wrapper = defaultWrapper, strict) {
+export default function schemaValidatorFactory (rules, errorHandler, wrapper = defaultWrapper, defaultStrict) {
+
   function SchemaValidate (rules) {
-    return async function (data) {
-      const schema = new Schema(rules, strict)
-      if (!await schema.validate(data)) {
+    const schema = new Schema(rules, defaultStrict)
+    return async function (data, strict) {
+      if(typeof data === 'boolean'){
+        const _strict = data
+        data = strict
+        strict = _strict
+      }
+      if (!await schema.validate(data, strict)) {
         if (typeof errorHandler === 'function') {
           errorHandler(schema.errors)
         }
