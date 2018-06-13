@@ -21,7 +21,7 @@ export default class Schema {
     this.errors.push(error)
   }
   async validate (data, strict) {
-    strict = strict===undefined ? this.strict : strict
+    strict = strict === undefined ? this.strict : strict
     ensureKeysExists(Object.keys(this.rules), data)
     const entries = Object.entries(data)
     for (let [key, value] of entries) {
@@ -41,7 +41,7 @@ export default class Schema {
     return this.errors.length === 0
   }
   validateSync (data, strict) {
-    strict = strict===undefined ? this.strict : strict
+    strict = strict === undefined ? this.strict : strict
     ensureKeysExists(Object.keys(this.rules), data)
     Object.entries(data).forEach(([key, value]) => {
       const funcList = this.rules[key]
