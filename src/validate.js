@@ -7,6 +7,7 @@ import isArray from './validators/is-array'
 import isInteger from './validators/is-integer'
 import isString from './validators/is-string'
 import isBool from './validators/is-bool'
+import isBoolInt from './validators/is-bool-int'
 
 import arrayEvery from './validators/array-every'
 import arrayEveryAsync from './validators/array-every-async'
@@ -124,6 +125,7 @@ export default {
   isInteger,
   isString,
   isBool,
+  isBoolInt,
 
   arrayEvery,
   arrayEveryAsync,
