@@ -22,6 +22,13 @@ export default class Schema {
   }
   async validate (data, strict) {
     strict = strict === undefined ? this.strict : strict
+    if(typeof data!=='object' || data===null){
+      this.errors.push({
+        message: 'object expected',
+        value: data,
+      })
+      return false
+    }
     ensureKeysExists(Object.keys(this.rules), data)
     const entries = Object.entries(data)
     for (let [key, value] of entries) {
